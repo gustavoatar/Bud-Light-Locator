@@ -1,0 +1,595 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bud Light All Results Component - Product Locator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/animate.css">        
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/materialize-icons.css">     
+        <link rel="stylesheet" href="css/style.css">  
+        <link rel="stylesheet" href="css/pin.css">  
+</head>
+<body class="find-us body-page top">
+<!-- 
+	<h1 class="title">Bud Light Product Locator - Find Us Component</h1>
+	<a href="#specs" class="specs"></a>
+	<a href="index.html" class="home-btn"></a>
+ --><br />
+	<h1 class="center-text entry-title">There are <strong>26 bars</strong> and <strong>19 stores</strong> with Bud Light stocked near <span class="location-shown">Detroit, MI</span> <a href="#vmodal" class="edit-shown">Edit  <i class="fa fa-map-marker fa-2"></i></span></a></h2>
+	
+	<div class="tab-holder find-us">
+		<h1 class="center-text select-brew">Select a Brew</h1>
+		<div class="products">
+			<div class="product">
+				<a href="#"><img src="images/product.png" />
+				<p class="small center-text">Bud Light Lime</p>	</a>	
+			</div>
+			<div class="product">
+				<a href="#"><img src="images/product.png" />
+				<p class="small center-text">Bud Light Platinum</p>	</a>	
+			</div>
+			<div class="product selected">
+				<a href="#"><img src="images/product.png" />
+				<p class="small center-text">Bud Light</p></a>
+			</div>			
+			<div class="product">
+				<a href="#"><img src="images/product.png" />
+				<p class="small center-text">Chelada</p>	</a>	
+			</div>	
+			<div class="product">
+				<a href="#lime" class="page-scroll"><img src="images/product.png" />
+				<p class="small center-text">Lime-A-Rita</p>	</a>	
+			</div>
+		</div>	
+		<div class="tab">
+			<ul class="tabs">
+				<li class="branded"><a href="#">Night Out <span class="pill">5</span></a></li>
+				<li class="branded"><a href="#">Night In  <span class="pill">6</span></a></li>
+				<li class="edit"><a href="#vmodal">Edit <i class="fa fa-map-marker fa-2"></i></a></li>								
+			
+			</ul> <!-- / tabs -->
+
+			<div class="tab_content">
+				<div class="tabs_item">
+					<div class="tab_content">
+						<div class="holder-canvas">
+							<div class="pin-info">
+								<div class="pin-info-close" id="close-info"><i aria-hidden="true" class="fa fa-times fa-3"></i></div>
+								<div class="pin-info-triangle"></div>
+								<div class="vcard pinned">
+									<div class="org">
+										<p><strong>Norm's Field of Dreams</strong></p>
+									</div>
+									<div class="adr">
+										<div class="street-address">
+											1090 ROCHESTER RD
+										</div><span class="locality">TROY</span> <span class=
+										"region">MI</span> <span class="postal-code">48083</span>
+									</div>
+									<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+									<div class="directions">
+										<p class="small miles-away">1.1 Miles Away</p>
+										<button>Get Directions <i aria-hidden="true" class=
+										"fa fa-angle-right fa-2"></i></button>
+									</div>
+								</div>								
+							</div>
+							<div class="item-delivery">
+								<img src="images/product.png" /><span>&plus;</span>
+								<img src="images/drizly.png" /><span>&equals;</span>
+								<button>Get Delivery <i aria-hidden="true" class="fa fa-angle-right fa-2"></i></button>
+							</div>	
+							<div class="map one" id="pin-one">
+								<div class="pin"></div>
+							</div>	
+							<div class="map two">
+								<div class="pin"></div>
+							</div>			
+							<div class="map three">
+								<div class="pin"></div>
+							</div>	
+							<div class="map four">
+								<div class="pin"></div>
+							</div>
+							<div class="map five">
+								<div class="pin"></div>
+							</div>							
+							<div class="map me">
+								<div class="pulse red"></div>
+							</div>							
+							<div class="grayarea">
+								<button class="refresh">Redo Search Here <i class="fa fa-refresh fa-2"></i></button>
+							</div>
+							<a href="#vmodal" class="edit-location-map">Edit <i class="fa fa-map-marker fa-2"></i></span></a>
+							<div class="controlstwo">
+								<a id="expand" href="#eightteen" class="page-scroll">Expand <i class="fa fa-expand fa-2"></i></a>	
+								<a id="collapse" href="#top" class="hide hidemobile page-scroll">Collapse <i class="fa fa-compress fa-2"></i></a>	
+							</div>
+							<div class="controls">
+								<a id="zoomin"><i class="fa fa-plus-circle fa-2"></i></a>
+								<a id="zoomout"><i class="fa fa-minus-circle fa-2"></i></a>	
+							</div>	
+							<canvas></canvas>
+			
+						</div>					
+						<div class="nearest" id="eightteen">
+							<div class="vcard">
+								<ol class="list list--ordered">
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Norm's Field of Dreams</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.1 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+										</div>
+								
+									
+									</li>
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Rock On Third</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Buffalo Wild Wings</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Rock On Third</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Buffalo Wild Wings</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>										
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Norm's Field of Dreams</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.1 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+										</div>
+								
+									
+									</li>
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Rock On Third</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Buffalo Wild Wings</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Rock On Third</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+										</div>
+									</li>									
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Buffalo Wild Wings</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Norm's Field of Dreams</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.1 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+										</div>
+								
+									
+									</li>
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Rock On Third</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Buffalo Wild Wings</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Rock On Third</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item hide-item">
+										<div class="org">
+											<p><strong>Buffalo Wild Wings</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>										
+								</ol>																
+							</div>	
+						<button class="reverse load-more load-more-one" id="load-more-one">Load More <i class="fa fa-refresh" aria-hidden="true"></i></button>																											
+					</div>	
+				</div> <!-- / tabs_item -->
+				</div>
+				<div class="tabs_item">
+					<div class="tab_content">
+						<div class="holder-canvas">
+							<div class="item-delivery">
+								<img src="images/product.png" /><span>&plus;</span>
+								<img src="images/drizly.png" /><span>&equals;</span>
+								<button>Get Delivery <i aria-hidden="true" class="fa fa-angle-right fa-2"></i></button>
+							</div>	
+							<div class="map one">
+								<div class="pin"></div>
+							</div>	
+							<div class="map two">
+								<div class="pin"></div>
+							</div>			
+							<div class="map three">
+								<div class="pin"></div>
+							</div>	
+							<div class="map four">
+								<div class="pin"></div>
+							</div>
+							<div class="map five">
+								<div class="pin"></div>
+							</div>							
+							<div class="map me">
+								<div class="pulse red"></div>
+							</div>							
+							<div class="grayarea">
+								<button class="refresh">Redo Search Here<i class="fa fa-refresh fa-2"></i></button>
+							</div>
+							<div class="controlstwo">
+								<a id="expand">Expand <i class="fa fa-expand fa-2"></i></a>	
+								<a id="collapse" class="hide hidemobile">Collapse <i class="fa fa-compress fa-2"></i></a>	
+							</div>
+							<div class="controls">
+								<a id="zoomin"><i class="fa fa-plus-circle fa-2"></i></a>
+								<a id="zoomout"><i class="fa fa-minus-circle fa-2"></i></a>	
+							</div>	
+							<canvas></canvas>
+			
+						</div>					
+						<div class="nearest">
+							<div class="vcard">
+								<ol class="list list--ordered">
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Kroger</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.1 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+										</div>
+								
+									
+									</li>
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Meijer</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Liquor Corners</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>
+									<li class="list__item">
+										<div class="org">
+											<p><strong>CVS Pharmacy</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												3090 ROCHESTER RD
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.3 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>									
+									<li class="list__item">
+										<div class="org">
+											<p><strong>Rite Aid Pharmacy</strong></p>
+										</div>
+										<div class="adr">
+											<div class="street-address">
+												1234 Livernois Ave
+											</div><span class="locality">TROY</span> <span class=
+											"region">MI</span> <span class="postal-code">48083</span>
+										</div>
+										<span class="call"><a href="tel:248-281-2293">248-281-2293</a></span>
+										<div class="directions">
+											<p class="small miles-away">1.5 Miles Away</p>
+											<button>Get Directions <i aria-hidden="true" class=
+											"fa fa-angle-right fa-2"></i></button>
+											
+							
+										</div>
+									</li>										
+								</ol>
+							</div>	
+					</div>	
+				</div> <!-- / tabs_item -->
+				</div>				
+				<div class="tabs_item">
+					<fieldset>
+						<legend>EDIT <i aria-hidden="true" class="fa fa-map-marker"></i></legend>
+							<input type="number" pattern="[0-9]{5}" name="zipcode" placeholder="Enter Your Zip Code" maxlength="5" class="form-control form-redesign zip-code-input" tabindex="1" max="99999" required="">
+						
+							<a href="locator-all-results.html" class="button" type="submit" value="Submit" tabindex="4">ENTER <i aria-hidden="true" class=
+									"fa fa-angle-right fa-2"></i></a>
+						
+										<br /><a href="#" class="find-mylocation">Find my location <i aria-hidden="true" class="fa fa-map-marker fa-2"></i></a>					
+							<br />			
+					</fieldset>	
+
+					</div> <!-- / tabs_item -->
+				</div> <!-- / tab_content -->
+		</div>	
+	</div>
+</div>
+<div id="vmodal">
+  <a class="cerrar" href="#cerrar"> <i aria-hidden="true" class="fa fa-times"></i></a>
+	<fieldset>
+		<legend>EDIT <i aria-hidden="true" class="fa fa-map-marker"></i></legend>
+			<input type="number" pattern="[0-9]{5}" name="zipcode" placeholder="Zip Code" maxlength="5" class="form-control form-redesign zip-code-input" tabindex="1" max="99999" required="">
+	
+			<a href="locator-all-results.html" class="button" type="submit" value="Submit" tabindex="4">ENTER <i aria-hidden="true" class=
+					"fa fa-angle-right fa-2"></i></a>
+	
+						<br /><a href="#" class="find-mylocation">Find my location <i aria-hidden="true" class="fa fa-map-marker fa-2"></i></a>					
+			<br />			
+	</fieldset>	  	  
+</div>
+   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+   <script src="js/index.js"></script>
+   <script src="js/zoom.js"></script>
+   <script src="js/jquery.easing.min.js"></script>
+    
+    
+    
+  </body>
+</html>
