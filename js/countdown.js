@@ -1,4 +1,4 @@
-var deadline = 'Nov 09 2016 19:00:00 GMT-0400';
+var deadline = 'Jan 26 2017 19:00:00 GMT-0400';
 function time_remaining(endtime){
 	var t = Date.parse(endtime) - Date.parse(new Date());
 	var seconds = Math.floor( (t/1000) % 60 );
@@ -18,7 +18,7 @@ function run_clock(id,endtime){
 run_clock('clockdiv',deadline);
 
 
-var deadlinetwo = 'Nov 19 2016 18:30:00 GMT-0400';
+var deadlinetwo = 'Jan 27 2017 18:30:00 GMT-0400';
 function time_remainingtwo(endtime){
 	var t = Date.parse(endtime) - Date.parse(new Date());
 	var seconds = Math.floor( (t/1000) % 60 );

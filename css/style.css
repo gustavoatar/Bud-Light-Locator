@@ -1365,12 +1365,17 @@ ul.cards-split-delay.transition li.card.card-3 {
     height: 400px;
     transition: .2s all;
     overflow: visible;
-    background: gray;
+    background: #444;
+    clear: both;
 }
 .dropdown .expansion.show {
     display: block;
     visibility: visible;
     opacity: 1;
+}
+
+.dropdown.lime .expansion{
+	min-width: auto;
 }
 .dropdown .expansion {
     visibility: hidden;
@@ -1404,6 +1409,14 @@ ul.cards-split-delay.transition li.card.card-3 {
     background: white;
     color: black;
 }
+
+.dropdown.lime-all-results {
+	width: 50%;
+	margin: 20px auto;
+	display: block;
+	clear: both;
+	
+}
 .copy-code.copied:hover,
 .copy-code.copied:visited,
 .copy-code.copied:active {
@@ -1432,7 +1445,7 @@ ul.cards-split-delay.transition li.card.card-3 {
     float: none;
     width: 50px;
     height: 50px;
-    position: fixed;
+    position: absolute;
     top: 64%;
     right: 59%;
     transition: .4s all;
@@ -1441,8 +1454,8 @@ ul.cards-split-delay.transition li.card.card-3 {
     float: none;
     width: 50px;
     height: 50px;
-    position: fixed;
-    top: 50%px;
+    position: absolute;
+    top: 50px;
     right: 20%;
     transition: .7s all;
 }
@@ -1450,8 +1463,8 @@ ul.cards-split-delay.transition li.card.card-3 {
     float: none;
     width: 50px;
     height: 50px;
-    position: fixed;
-    bottom: 15%;
+    position: absolute;
+    bottom: 9%;
     right: 40%;
     transition: 1s all;
 }
@@ -1459,7 +1472,7 @@ ul.cards-split-delay.transition li.card.card-3 {
     float: none;
     width: 50px;
     height: 50px;
-    position: fixed;
+    position: absolute;
     bottom: 11%;
     right: 6%;
     transition: 1.4s all;
@@ -1468,7 +1481,7 @@ ul.cards-split-delay.transition li.card.card-3 {
     float: none;
     width: 50px;
     height: 50px;
-    position: fixed;
+    position: absolute;
     bottom: 4%;
     right: 50%;
     transition: 1.7s all;
@@ -1576,8 +1589,8 @@ ul.cards-split-delay.transition li.card.card-3 {
     right: 40%;
 }
 #pin-one.newerposition-one {
-    top: 90%;
-    right: 43%;
+	top: 68%;
+    right: 58%;
 }
 #pin-one.newerposition-one .pin {
     background: black;
@@ -2187,8 +2200,6 @@ a.cerrar:visited {
     }
     .product img {
         opacity: .4;
-        width: 77px;
-        height: 77px;
     }
     .cans {
         margin-left: -115px;
@@ -2202,6 +2213,7 @@ a.cerrar:visited {
         height: 48px;
         font-size: .89em;
         text-align: left;
+        position: relative;
     }
     .dropdown img {
         float: left;
@@ -2219,11 +2231,15 @@ a.cerrar:visited {
         display: inline-block;
         float: left;
         line-height: 30px;
+        width: 100%;
     }
     .dropdown i {
         line-height: 30px;
-        margin-right: 6px;
-        margin-left: 6px;
+        margin-right: 0px;
+        margin-left: 0px;
+        position: absolute;
+    	top: 6px;
+    	right: 8px;
     }
     .title {
         text-align: left;
